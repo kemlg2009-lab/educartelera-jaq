@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Periódico digital de nuestra comunidad educativa.">
+  <title>Noticias | EduCartelera</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="EduCartelera, inicio">
+      <img class="site-logo" src="escudo.png" alt="Escudo de la institución" width="38" height="38">
+      <span>Edu<span class="brand-accent">Cartelera</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button"
+      aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a class="active" href="noticias.html">Noticias</a>
+      <a href="calendar.html">Calendario</a>
+      <a href="publica.html">Publicar</a>
+    </nav>
+  </header>
+
+  <main class="periodico">
+
+    <!-- CABECERA DEL PERIÓDICO -->
+    <section class="periodico-masthead">
+      <span class="periodico-etiqueta">EL ESPACIO INFORMATIVO ESCOLAR</span>
+      <h1>EduCartelera <span>Informa</span></h1>
+      <p>Las noticias, actividades y novedades de nuestra comunidad educativa.</p>
+      <div class="periodico-linea"></div>
+    </section>
+
+    <!-- BUSCADOR -->
+    <section class="periodico-busqueda">
+      <div>
+        <span class="periodico-mini">EDICIÓN DIGITAL</span>
+        <h2>Lo que pasa en nuestra institución</h2>
+      </div>
+
+      <label class="periodico-search">
+        <span aria-hidden="true">⌕</span>
+        <input id="news-search" type="search"
+          placeholder="Buscar noticias..." autocomplete="off"
+          aria-label="Buscar noticias">
+      </label>
+    </section>
+
+    <!-- NOTICIA DESTACADA -->
+    <section class="periodico-destacada">
+      <article class="periodico-portada" data-search="institución comunidad estudiantes actividades escolares vida institucional">
+        <div class="portada-foto">
+          <img src="institucion-noticias.jpg"
+            alt="Fotografía de nuestra institución educativa">
+          <span class="portada-sello">NOTICIA DESTACADA</span>
+        </div>
+
+        <div class="portada-contenido">
+          <span class="noticia-seccion">VIDA INSTITUCIONAL</span>
+          <h2>Una comunidad que aprende, participa y crece</h2>
+          <p>
+            Conoce las actividades, experiencias y novedades que forman
+            parte de la vida de nuestra comunidad educativa.
+          </p>
+          <a class="periodico-enlace" href="publica.html">
+            Comparte una noticia <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <aside class="periodico-lateral">
+        <span class="periodico-mini">EN ESTA EDICIÓN</span>
+        <h2>También te puede interesar</h2>
+
+        <article class="lateral-noticia" data-search="participación estudiantil comunidad actividades">
+          <span class="lateral-numero">01</span>
+          <div>
+            <span class="noticia-seccion">COMUNIDAD</span>
+            <h3>La participación estudiantil hace la diferencia</h3>
+            <p>Compartir ideas ayuda a construir un mejor ambiente escolar.</p>
+          </div>
+        </article>
+
+        <article class="lateral-noticia" data-search="organización calendario eventos actividades fechas">
+          <span class="lateral-numero">02</span>
+          <div>
+            <span class="noticia-seccion">AGENDA ESCOLAR</span>
+            <h3>Prepárate para las próximas actividades</h3>
+            <p>Consulta las fechas y organiza tus actividades con tiempo.</p>
+            <a href="calendar.html">Ver calendario →</a>
+          </div>
+        </article>
+
+        <article class="lateral-noticia" data-search="ideas creatividad propuestas estudiantes">
+          <span class="lateral-numero">03</span>
+          <div>
+            <span class="noticia-seccion">PARTICIPACIÓN</span>
+            <h3>Tu voz también forma parte de la cartelera</h3>
+            <p>Comparte propuestas e información positiva.</p>
+            <a href="publica.html">Enviar propuesta →</a>
+          </div>
+        </article>
+      </aside>
+    </section>
+
+    <!-- OTRAS NOTICIAS -->
+    <section class="periodico-otras">
+      <div class="periodico-titulo-seccion">
+        <div>
+          <span class="periodico-mini">PARA ESTAR AL DÍA</span>
+          <h2>Más noticias de nuestra comunidad</h2>
+        </div>
+        <span class="periodico-decoracion">✦</span>
+      </div>
+
+      <div class="periodico-tarjetas" id="news-grid">
+        <article class="periodico-tarjeta" data-search="académico aprendizaje educación estudiantes">
+          <div class="tarjeta-cabecera tarjeta-azul">
+            <span>APRENDIZAJE</span>
+            <span class="tarjeta-icono">✎</span>
+          </div>
+          <div class="tarjeta-contenido">
+            <h3>Aprender también es compartir</h3>
+            <p>Las ideas y experiencias de los estudiantes enriquecen el aprendizaje de todos.</p>
+            <a href="publica.html">Comparte una idea →</a>
+          </div>
+        </article>
+
+        <article class="periodico-tarjeta" data-search="deporte cultura actividades escolares eventos">
+          <div class="tarjeta-cabecera tarjeta-verde">
+            <span>ACTIVIDADES</span>
+            <span class="tarjeta-icono">★</span>
+          </div>
+          <div class="tarjeta-contenido">
+            <h3>Una escuela llena de iniciativas</h3>
+            <p>Las actividades escolares nos permiten colaborar, expresarnos y aprender juntos.</p>
+            <a href="calendar.html">Ver actividades →</a>
+          </div>
+        </article>
+
+        <article class="periodico-tarjeta" data-search="creatividad ideas propuestas participación">
+          <div class="tarjeta-cabecera tarjeta-amarilla">
+            <span>IDEAS Y PROPUESTAS</span>
+            <span class="tarjeta-icono">✦</span>
+          </div>
+          <div class="tarjeta-contenido">
+            <h3>¡Haz que tu idea se conozca!</h3>
+            <p>EduCartelera es un espacio para compartir información que aporte a la comunidad.</p>
+            <a href="publica.html">Publicar ahora →</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="periodico-vacio" id="news-empty" hidden>
+        No encontramos noticias con ese texto. Prueba con otra palabra.
+      </p>
+      <p class="periodico-conteo" id="news-count">6 publicaciones</p>
+    </section>
+
+    <section class="periodico-invitacion">
+      <div>
+        <span class="periodico-mini">PARTICIPA</span>
+        <h2>Las próximas noticias también pueden ser tuyas.</h2>
+        <p>Comparte una idea o una novedad para la comunidad educativa.</p>
+      </div>
+      <a href="publica.html">Ir a Publicar <span>→</span></a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">Edu<span class="brand-accent">Cartelera</span></a>
+    <p>Un espacio digital para informar, compartir y crecer juntos.</p>
+    <span class="copyright">© <span data-year>2026</span> EduCartelera</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Envía una propuesta para la cartelera digital escolar.">
+  <title>Publicar | EduCartelera</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="EduCartelera, inicio">
+      <img class="site-logo" src="escudo.png" alt="Escudo de la institución" width="38" height="38">
+      <span>Edu<span class="brand-accent">Cartelera</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a><a href="noticias.html">Noticias</a><a href="calendar.html">Calendario</a><a class="active" href="publica.html">Publicar</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero page-hero-green">
+      <span class="section-kicker">TU VOZ CUENTA</span>
+      <h1>Comparte tu <span>idea.</span></h1>
+      <p>¿Tienes una noticia, una actividad o una propuesta para la comunidad? Cuéntanos aquí.</p>
+    </section>
+
+    <section class="section publish-layout">
+      <div class="publish-intro">
+        <div class="publish-art"><span class="publish-art-icon">✍️</span><span class="publish-spark spark-a">✦</span><span class="publish-spark spark-b">＋</span></div>
+        <span class="section-kicker">PARTICIPA</span>
+        <h2>Ayúdanos a mantener la cartelera activa.</h2>
+        <p>Comparte información clara, respetuosa y relacionada con la vida escolar.</p>
+        <ul class="check-list"><li>✓ Noticias y logros escolares</li><li>✓ Actividades y fechas importantes</li><li>✓ Ideas para mejorar la comunidad</li></ul>
+      </div>
+
+      <form class="publish-form" id="publish-form">
+        <div class="form-heading"><span class="section-kicker">NUEVA PROPUESTA</span><h2>Completa los datos</h2><p>Los campos marcados con * son obligatorios.</p></div>
+        <label for="author">Tu nombre *</label>
+        <input id="author" name="author" type="text" placeholder="Escribe tu nombre" required maxlength="70">
+      
+<label class="category-label">Tipo de publicación *</label>
+
+<div class="categorias-publicacion">
+
+  <label class="categoria-card categoria-avisos">
+    <input type="radio" name="category" value="Avisos importantes" required>
+    <span class="categoria-icono">📢</span>
+    <span class="categoria-info">
+      <strong>Avisos importantes</strong>
+      <small>Comunicados y recordatorios</small>
+    </span>
+    <span class="categoria-check">✓</span>
+  </label>
+
+  <label class="categoria-card categoria-noticias">
+    <input type="radio" name="category" value="Noticias institucionales" required>
+    <span class="categoria-icono">📰</span>
+    <span class="categoria-info">
+      <strong>Noticias institucionales</strong>
+      <small>Novedades de la institución</small>
+    </span>
+    <span class="categoria-check">✓</span>
+  </label>
+
+  <label class="categoria-card categoria-eventos">
+    <input type="radio" name="category" value="Eventos y actividades" required>
+    <span class="categoria-icono">📅</span>
+    <span class="categoria-info">
+      <strong>Eventos y actividades</strong>
+      <small>Fechas y actividades escolares</small>
+    </span>
+    <span class="categoria-check">✓</span>
+  </label>
+
+  <label class="categoria-card categoria-logros">
+    <input type="radio" name="category" value="Logros estudiantiles" required>
+    <span class="categoria-icono">🏆</span>
+    <span class="categoria-info">
+      <strong>Logros estudiantiles</strong>
+      <small>Reconocimientos y triunfos</small>
+    </span>
+    <span class="categoria-check">✓</span>
+  </label>
+
+</div>
+
+        <label for="headline">Título *</label>
+        <input id="headline" name="headline" type="text" placeholder="¿De qué trata tu publicación?" required maxlength="100">
+        <label for="details">Descripción *</label>
+        <textarea id="details" name="details" rows="5" placeholder="Explica tu idea con claridad..." required maxlength="700"></textarea>
+        <div class="form-footer"><span id="char-count">0/700 caracteres</span><button class="button button-primary" type="submit">Preparar publicación <span aria-hidden="true">→</span></button></div>
+        <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="index.html">Edu<span class="brand-accent">Cartelera</span></a><p>Un espacio digital para informar, compartir y crecer juntos.</p><span class="copyright">© <span data-year>2026</span> EduCartelera</span></footer>
+</body>
+</html>
